@@ -55,7 +55,7 @@ class DevByteApplication : Application() {
                 .setRequiresCharging(true)
                 .setRequiresBatteryNotLow(true)
                 .apply {
-                    if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                         setRequiresDeviceIdle(true)
                     }
                 }
@@ -70,5 +70,10 @@ class DevByteApplication : Application() {
                 ExistingPeriodicWorkPolicy.KEEP,
                 repeatRequest
         )
+
+        WorkManager.getInstance().enqueueUniquePeriodicWork(
+                RefreshDataWorker.WOEK_NAME,
+                ExistingPeriodicWorkPolicy.KEEP,
+                repeatRequest)
     }
 }

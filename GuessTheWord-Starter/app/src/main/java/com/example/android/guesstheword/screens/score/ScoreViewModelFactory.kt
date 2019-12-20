@@ -2,6 +2,7 @@ package com.example.android.guesstheword.screens.score
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import java.io.FileNotFoundException
 import java.lang.IllegalArgumentException
 
 class ScoreViewModelFactory(val score: Int) : ViewModelProvider.Factory {

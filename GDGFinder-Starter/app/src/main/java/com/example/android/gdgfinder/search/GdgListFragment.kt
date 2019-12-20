@@ -65,8 +65,8 @@ class GdgListFragment : Fragment() {
         // Sets the adapter of the RecyclerView
         binding.gdgChapterList.adapter = adapter
 
-        viewModel.showNeedLocation.observe(viewLifecycleOwner, object: Observer<Boolean> {
-            override fun onChanged(show: Boolean?) {
+        viewModel.showNeedLocation.observe(viewLifecycleOwner,
+            Observer<Boolean> { show ->
                 // Snackbar is like Toast but it lets us show forever
                 if (show == true) {
                     Snackbar.make(
@@ -75,8 +75,7 @@ class GdgListFragment : Fragment() {
                         Snackbar.LENGTH_LONG
                     ).show()
                 }
-            }
-        })
+            })
 
         setHasOptionsMenu(true)
         return binding.root

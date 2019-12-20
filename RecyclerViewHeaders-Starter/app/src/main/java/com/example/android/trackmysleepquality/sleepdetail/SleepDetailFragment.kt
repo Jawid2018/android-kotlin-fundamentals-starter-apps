@@ -64,7 +64,7 @@ class SleepDetailFragment : Fragment() {
         // give the binding object a reference to it.
         binding.sleepDetailViewModel = sleepDetailViewModel
 
-        binding.setLifecycleOwner(this)
+        binding.lifecycleOwner = this
 
         // Add an Observer to the state variable for Navigating when a Quality icon is tapped.
         sleepDetailViewModel.navigateToSleepTracker.observe(this, Observer {

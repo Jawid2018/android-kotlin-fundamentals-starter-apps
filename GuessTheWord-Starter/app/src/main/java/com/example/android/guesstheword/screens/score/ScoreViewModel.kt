@@ -1,5 +1,7 @@
 package com.example.android.guesstheword.screens.score
 
+import android.net.Uri
+import androidx.core.net.toUri
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -26,4 +28,5 @@ class ScoreViewModel(finalScore: Int) : ViewModel() {
     fun onPLayAgainCompleted() {
         _playAgain.value = false
     }
+
 }

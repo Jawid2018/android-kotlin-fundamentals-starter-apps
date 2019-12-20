@@ -61,7 +61,7 @@ class MainActivity : AppCompatActivity() {
         // then setup the action bar, tell it about the DrawerLayout
         setupActionBarWithNavController(navController, binding.drawerLayout)
 
-
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
         // finally setup the left drawer (called a NavigationView)
         binding.navigationView.setupWithNavController(navController)
 

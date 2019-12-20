@@ -125,6 +125,7 @@ class GameViewModel : ViewModel() {
         _eventGameFinish.value = false
     }
 
+
     val currentTimeString: LiveData<String> = Transformations.map(_currentTime) { time ->
         DateUtils.formatElapsedTime(time)
     }
